@@ -1,0 +1,223 @@
+:root {
+    --cor-de-fundo: #101115;
+    --branco-principal: #FFFFFF;
+    --botao-azul: #167BF7;
+    --cinza-secundario: #C0C0C0;
+    --fonte-principal: "Inter";
+    --efeito-lista: purple;
+    --botao-azul-efeito: #be1919;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+
+}
+
+/* TROQUE SOMENTE A CLASSE .principal POR ESSA */
+
+.principal {
+
+    background-image:
+    linear-gradient(
+        to right,
+        rgba(0,0,0,.95) 15%,
+        rgba(0,0,0,.70) 40%,
+        rgba(0,0,0,.25) 70%,
+        rgba(0,0,0,.05) 100%
+    ),
+    url("img/ChatGPT\ Image\ 4\ de\ mai.\ de\ 2026\,\ 21_03_22.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+}
+
+.container__caixa {
+
+    width: 40%;
+
+    margin-left: 5rem;
+
+    z-index: 2;
+
+}
+
+.container__titulo {
+
+    font-size: 4rem;
+    line-height: 1.1;
+
+    margin-bottom: 2rem;
+
+}
+
+.container__imagem {
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.container__botao__secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+
+.container__botao__terciario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+
+
+.secundario {
+    align-items: center;
+    margin: 0 10rem;
+}
+
+.secundario_imagem {
+    width: 70%;
+}
+
+.container__descricao {
+    padding: 2rem;
+}
+
+.descricao__titulo {
+    font-size: 3rem;
+    color: var(--branco-principal);
+    margin-bottom: 0.1rem;
+}
+
+.descricao__texto {
+    color: var(--branco-principal);
+}
+
+.secundario__botao {
+    margin-top: 0.3rem;
+    display: inline-block;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 3rem;
+}
+
+.dispositivos__lista {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.lista__item {
+    font-size: 2rem;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1rem;
+}
+
+.rodape__texto {
+    margin: 1rem 0;
+    color: var(--cinza-secundario);
+    font-size: 0.8rem;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: block;
+        background-image: none;
+    }
+
+    .container__caixa {
+        margin: 2rem;
+    }
+
+    .container__imagem {
+        width: 40vw;
+    }
+
+    .secundario {
+        text-align: center;
+        margin: 0;
+    }
+
+    .secundario_imagem {
+        width: 40vw;
+    }
+
+
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .rodape__lista {
+        display: block;
+    }
+
+
+}
